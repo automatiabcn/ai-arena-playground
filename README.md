@@ -1,5 +1,8 @@
 # AI Arena Playground
 
+![AI Arena Playground Demo](./docs/demo.gif)
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![TypeScript](https://img.shields.io/badge/Language-TypeScript-%233178C6.svg)](https://www.typescriptlang.org/)
 
 ## What is this?
@@ -40,7 +43,7 @@ Start with Groq + Ollama for a completely free experience. Add paid providers as
 
 ```bash
 # 1. Clone
-git clone https://github.com/automatiabcn/ai-arena-playground.git
+git clone https://github.com/enzoemir1/ai-arena-playground.git
 cd ai-arena-playground
 
 # 2. Install + setup (creates .env from template, pushes DB schema, seeds defaults)

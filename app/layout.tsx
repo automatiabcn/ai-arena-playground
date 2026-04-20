@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <NavLink href="/settings">Settings</NavLink>
                 </div>
                 <a
-                  href="https://github.com/automatiabcn/ai-arena-playground"
+                  href="https://github.com/enzoemir1/ai-arena-playground"
                   target="_blank"
                   rel="noopener"
                   className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors"
