@@ -42,7 +42,7 @@ export default function HistoryPage() {
   }, [search]);
 
   const handleDelete = async (id?: string) => {
-    const url = id ? `/api/history?id=${id}` : "/api/history";
+    const url = id ? `/api/history?id=${id}` : "/api/history?all=true";
     await fetch(url, { method: "DELETE" });
     setComparisons((prev) => (id ? prev.filter((c) => c.id !== id) : []));
   };

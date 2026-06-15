@@ -95,7 +95,9 @@ export async function POST(req: NextRequest) {
         }
       });
 
-      await Promise.all(promises);
+      // allSettled (not all) so a single model's unexpected failure can never
+      // prevent the "done" event from firing and the stream from closing.
+      await Promise.allSettled(promises);
       send({ type: "done", comparisonId: comparison.id });
       controller.close();
     },
