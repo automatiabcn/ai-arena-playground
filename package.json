@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Compare AI models side by side. Free, open-source, self-hosted.",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
