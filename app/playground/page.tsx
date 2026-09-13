@@ -26,16 +26,15 @@ const AVAILABLE_MODELS = MODEL_REGISTRY;
 
 function PlaygroundContent() {
   const searchParams = useSearchParams();
-  const [prompt, setPrompt] = useState("");
+  const [prompt, setPrompt] = useState(() => {
+    // Read ?prompt= from templates page redirect
+    const p = searchParams.get("prompt");
+    return p ? decodeURIComponent(p) : "";
+  });
   const [systemPrompt, setSystemPrompt] = useState("");
   const [showSystem, setShowSystem] = useState(false);
   const [panelCount, setPanelCount] = useState(2);
 
-  // Read ?prompt= from templates page redirect
-  useEffect(() => {
-    const p = searchParams.get("prompt");
-    if (p) setPrompt(decodeURIComponent(p));
-  }, [searchParams]);
   const [panels, setPanels] = useState<PanelState[]>([
     { ...DEFAULT_PANEL, modelId: "llama-3.3-70b-versatile" },
     { ...DEFAULT_PANEL, modelId: "gpt-4o-mini" },

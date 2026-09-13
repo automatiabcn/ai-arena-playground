@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -28,10 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="min-h-screen flex flex-col">
             <nav className="sticky top-0 z-50 glass border-b border-white/5">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                <a href="/" className="flex items-center gap-2 group">
+                <Link href="/" className="flex items-center gap-2 group">
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm group-hover:shadow-lg group-hover:shadow-purple-500/25 transition-shadow">AI</div>
                   <span className="font-bold text-lg">AI Arena</span>
-                </a>
+                </Link>
                 <div className="hidden sm:flex items-center gap-6 text-sm text-[hsl(var(--muted-foreground))]">
                   <NavLink href="/playground">Playground</NavLink>
                   <NavLink href="/templates">Templates</NavLink>

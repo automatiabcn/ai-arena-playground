@@ -69,7 +69,7 @@ export default function SettingsPage() {
           </div>
           <div className="flex gap-3">
             <span className="font-bold text-purple-400">4.</span>
-            <span>The provider's models will automatically appear in the Playground model selector</span>
+            <span>The provider&apos;s models will automatically appear in the Playground model selector</span>
           </div>
         </div>
         <div className="mt-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-400">
